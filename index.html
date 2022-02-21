@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Texturina:ital,wght@0,300;0,400;0,700;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+  <title>Poções e Soluções</title>
+</head>
+
+<body>
+  <header>
+    <!--Inicio Cabeçalho-->
+    <nav class="navbar navbar-expand-sm navbar-dark">
+      <div class="container">
+        <a href="/index.html" class="navbar-brand">
+          <img src="imagens/logo.png" alt="Poções e Soluções" width="100" />
+        </a>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target=".nav-menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="collapse navbar-collapse ml-2 nav-menu">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a href="sobre.html" class="nav-link">Sobre</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="/contato.html" class="nav-link">Contato</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="" class="nav-link">Meus Pedidos</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="row w-100">
+            <section class="input-group col-sm-10">
+              <input class="form-control py-2 border-right-0 border" placeholder="busque pela porção desejada"
+                type="search" />
+              <span class="input-group-append">
+                <button class="input-group-text bg-transparent" type="button">
+                  <i class="fa fa-search"></i>
+                </button>
+              </span>
+            </section>
+
+            <div class="collapse navbar-collapse nav-menu col-sm-2" id="btnlogin">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a href="" class="btn btn-outline-light">Login</a>
+                </li>
+
+                <li class="nav-item ml-2" id="carrinho">
+                  <a href="" class="btn btn-outline-light">
+                    <i class="fa fa-shopping-cart"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--Fim Cabeçalho-->
+
+  <section id="home">
+    <!--Secao home-->
+    <div class="container">
+      <h5>Se conecte com a gente!</h5>
+      <div class="row">
+        <div class="col">
+          <p>
+            Receba ofertas recomendadas e preços exclusivos!
+          </p>
+        </div>
+        <form class="col-sm-8">
+          <div class="input-group ">
+            <input type="text" placeholder="Digite seu nome" class="form-control mr-2">
+            <input type="text" placeholder="Digite seu e-mail" class="form-control">
+            <div class="input-group-append">
+              <button type="button" class="btn btn-primary">Eu quero</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="produtos">
+    <!-- Inicio seção produtos-->
+    <div class="container pt-5 pb-5" id="pocoes">
+      <div class="row linha_1">
+
+        <div class="produto container  col-sm-3">
+          <div id="alegria" onclick="prodDetails('alegria')" class="clique">
+            <img id="imagem_alegria" src="imagens/alegria.png" alt="" width="100">
+            <h5 id="nome_alegria">Poçao da Alegria</h5>
+            <p id="desc_alegria">Essa é a poção ideal para quando você está triste, basta uma pequena dose para deixar
+              você alegre por três dias.</p>
+            <h6 id="preco_alegria">R$60,00</h6>
+            <div class="invisivel">
+              <span id="fabric_alegria"> Potter Porc</span>
+              <span id="peso_alegria">250ml</span>
+              <span id="cor_alegria">Azul</span>
+            </div>
+          </div>
+          <button type="button" class="btn  btncomprar" data-toggle="modal" data-target=".modal_compra">Comprar</button>
+        </div>
+
+        <div class="produto container  col-sm-3 ml-3">
+          <div id="forca" onclick="prodDetails('forca')" class="clique">
+            <img id="imagem_forca" src="imagens/forca.png" alt="" width="100">
+            <h5 id="nome_forca">Poçao da Força</h5>
+            <p id="desc_forca">Precisa de uma força extra para fazer algo pesado, essa poção é a ideal, uma dose garante
+              extrema força durante 4 horas</p>
+            <h6 id="preco_forca">R$100,00</h6>
+            <div class="invisivel">
+              <span id="fabric_forca"> Hulk Banner</span>
+              <span id="peso_forca">350ml</span>
+              <span id="cor_forca">Verde</span>
+            </div>
+          </div>
+          <button type="button" class="btn  btncomprar" data-toggle="modal" data-target=".modal_compra">Comprar</button>
+        </div>
+
+        <div class="produto container  col-sm-3 ml-3">
+          <div onclick="prodDetails('invisibilidade')" class="clique">
+            <img id="imagem_invisibilidade" src="imagens/invisibilidade.png" alt="" width="100">
+            <h5 id="nome_invisibilidade">Poçao da invisibilidade</h5>
+            <p id="desc_invisibilidade">Essa poção te deixa invisivel durante 24 horas. <strong>Atenção, deixa somente
+                você invisivel e não as suas roupas</strong> </p>
+            <h6 id="preco_invisibilidade">R$200,00</h6>
+            <div class="invisivel">
+              <span id="fabric_invisibilidade"> Translucent</span>
+              <span id="peso_invisibilidade">375ml</span>
+              <span id="cor_invisibilidade">Invisivel</span>
+            </div>
+          </div>
+          <button type="button" class="btn  btncomprar" data-toggle="modal" data-target=".modal_compra">Comprar</button>
+        </div>
+      </div>
+
+      <div class="row mt-2 linha2">
+        <div class="produto container  col-sm-3">
+          <div onclick="prodDetails('prosperidade')" class="clique">
+            <img id="imagem_prosperidade" src="imagens/prosperidade.png" alt="" width="100">
+            <h5 id="nome_prosperidade">Poçao da Prosperidade</h5>
+            <p id="desc_prosperidade">Essa poção vai facilitar para que você alcançe a prosperidade desejada mais
+              rápido, basta tomar e ir trabalhar que o dinheiro vem no fim do mês.</p>
+            <h6 id="preco_prosperidade">R$300,00</h6>
+            <div class="invisivel">
+              <span id="fabric_prosperidade"> Julius Corp</span>
+              <span id="peso_prosperidade">215ml</span>
+              <span id="cor_prosperidade">laranja</span>
+            </div>
+          </div>
+          <button type="button" class="btn  btncomprar" data-toggle="modal" data-target=".modal_compra">Comprar</button>
+        </div>
+
+        <div class="produto container  col-sm-3 ml-3">
+          <div onclick="prodDetails('sapo')" class="clique">
+            <img id="imagem_sapo" src="imagens/pedesapo.png" alt="" width="100">
+            <h5 id="nome_sapo">Poçao Cura Pé de Sapo</h5>
+            <p id="desc_sapo">Se você foi amaldiçoado e seu pé virou um pé de sapo, use essa poção para reverter a
+              maldição.</p>
+            <h6 id="preco_sapo">R$188,70</h6>
+            <div class="invisivel">
+              <span id="fabric_sapo">Anonymous Witches Corp </span>
+              <span id="peso_sapo">215ml</span>
+              <span id="cor_sapo">Verde</span>
+            </div>
+          </div>
+          <button type="button" class="btn  btncomprar" data-toggle="modal" data-target=".modal_compra">Comprar</button>
+        </div>
+
+        <div class="produto container  col-sm-3 ml-3">
+          <div onclick="prodDetails('cabelo')" class="clique">
+
+            <img id="imagem_cabelo" src="imagens/cabelo.png" alt="" width="100">
+            <h5 id="nome_cabelo">Poçao do Cabelo</h5>
+
+            <p id="desc_cabelo">Está sentindo falta dos fios de cabelo? Essa poção é a ideal para você, com ela seu
+              cabelo volta crescer</p>
+            <h6 id="preco_cabelo">R$250,00</h6>
+            <div class="invisivel">
+              <span id="fabric_cabelo"> Julius Corp</span>
+              <span id="peso_cabelo">215ml</span>
+              <span id="cor_cabelo">Azul</span>
+            </div>
+          </div>
+          <button type="button" class="btn  btncomprar" data-toggle="modal" data-target=".modal_compra">Comprar</button>
+        </div>
+      </div>
+
+    </div>
+  </section> <!-- Fim seção produtos-->
+
+  <footer class="pt-3 pb-3">
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <span class="footer-payment-title">Formas de pagamento </span>
+          <span class="footer-payment-title"> <img src="imagens/formas_pagamento.png"
+              alt="MasterCard, Visa, American Express, Hipercard, Elo" width="300">>
+          </span>
+        </div>
+        <div id="telefone">
+          <div>Compre pelo telefone:</div>
+          <h5>(66)2568-6677</h5>
+        </div>
+      </div>
+
+    </div>
+    <hr>
+
+    <div class="ofertas" id="text-oferta"> <i class="fa fa-envelope"></i> <span class="ml-2 pb-2">receba ofertas com
+        preços exclusivos</span> </div>
+    <div class="container ofertas">
+
+      <form class="col-sm-8">
+        <div class="input-group ">
+          <input type="text" placeholder="Digite seu nome" class="form-control mr-2">
+          <input type="text" placeholder="Digite seu e-mail" class="form-control">
+          <div class="input-group-append">
+            <button type="button" class="btn btn-primary">Enviar</button>
+          </div>
+      </form>
+
+    </div>
+    </div>
+    <hr>
+
+
+    <div class="container">
+      <p class="ofertas">
+        Preços e condições de pagamento exclusivos para compras via internet, podendo variar na loja física.
+        <br> Vendas sujeitas a análise e confirmação de dados.
+      </p>
+      <div class="container row ofertas">
+        <span><img src="imagens/logo_sem_texto.png" alt="logo" width="80"> </span>
+        <span> <strong>Poções e Soluções ME </strong> <br> CNPJ: 02.859.000/2569-88 <br> Endereço: Rua das Ilusões, 777
+          - Jardim da Floresta, Beco Vertical <br> CEP 13.333-666 <br> &copy; Todos os direitos reservados
+          <br>Desenvolvido por: <a href="https://github.com/fabioscarneiro" class="badge badge-dark"
+            target="_blank">Fábio Carneiro</a></span>
+      </div>
+
+    </div>
+
+    <div class="modal fade modal_compra" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+
+          <div class="row container checkout">
+
+
+            <div class="col pb-2">
+              <div class="text-center checkout">
+                <h2>Checkout</h2>
+              </div>
+              <h4 class="">Endereço de cobrança</h4>
+              <form class="needs-validation" novalidate>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="primeiroNome">Nome</label>
+                    <input type="text" class="form-control" id="primeiroNome" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                      É obrigatório inserir um nome válido.
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="sobrenome">Sobrenome</label>
+                    <input type="text" class="form-control" id="sobrenome" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                      É obrigatório inserir um sobre nome válido.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="nickname">Nickname</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">@</span>
+                    </div>
+                    <input type="text" class="form-control" id="nickname" placeholder="Nickname" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                      Seu nickname é obrigatório.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="email">Email <span class="text-muted">(Opcional)</span></label>
+                  <input type="email" class="form-control" id="email" placeholder="fulano@exemplo.com">
+                  <div class="invalid-feedback">
+                    Por favor, insira um endereço de e-mail válido, para atualizações de entrega.
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="endereco">Endereço</label>
+                  <input type="text" class="form-control" id="endereco" placeholder="Rua dos bobos, nº 0" required>
+                  <div class="invalid-feedback">
+                    Por favor, insira seu endereço de entrega.
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="endereco2">Endereço 2 <span class="text-muted">(Opcional)</span></label>
+                  <input type="text" class="form-control" id="endereco2" placeholder="Apartamento ou casa">
+                </div>
+
+                <div class="row">
+                  <div class="col-md-5 mb-3">
+                    <label for="pais">País</label>
+                    <select class="custom-select d-block w-100" id="pais" required>
+                      <option value="">Escolha...</option>
+                      <option>Brasil</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor, escolha um país válido.
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="estado">Estado</label>
+                    <select class="custom-select d-block w-100" id="estado" required>
+                      <option value="">Escolha...</option>
+                      <option>Acre</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor, insira um estado válido.
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="cep">CEP</label>
+                    <input type="text" class="form-control" id="cep" placeholder="" required>
+                    <div class="invalid-feedback">
+                      É obrigatório inserir um CEP.
+                    </div>
+                  </div>
+                </div>
+                <hr class="mb-4">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="mesmo-endereco">
+                  <label class="custom-control-label" for="mesmo-endereco">Endereço de entrega é o mesmo que o de
+                    cobrança.</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="salvar-info">
+                  <label class="custom-control-label" for="salvar-info">Lembrar desta informação, na próxima
+                    vez.</label>
+                </div>
+                <hr class="mb-4">
+
+                <h4 class="mb-3">Pagamento</h4>
+
+                <div class="d-block my-3">
+                  <div class="custom-control custom-radio">
+                    <input id="credito" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                    <label class="custom-control-label" for="credito">Cartão de crédito</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input id="debito" name="paymentMethod" type="radio" class="custom-control-input" required>
+                    <label class="custom-control-label" for="debito">Cartão de débito</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                    <label class="custom-control-label" for="paypal">PayPal</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="cc-nome">Nome no cartão</label>
+                    <input type="text" class="form-control" id="cc-nome" placeholder="" required>
+                    <small class="text-muted">Nome completo, como mostrado no cartão.</small>
+                    <div class="invalid-feedback">
+                      O nome que está no cartão é obrigatório.
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="cc-numero">Número do cartão de crédito</label>
+                    <input type="text" class="form-control" id="cc-numero" placeholder="" required>
+                    <div class="invalid-feedback">
+                      O número do cartão de crédito é obrigatório.
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-3 mb-3">
+                    <label for="cc-expiracao">Data de expiração</label>
+                    <input type="text" class="form-control" id="cc-expiracao" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Data de expiração é obrigatória.
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="cc-cvv">CVV</label>
+                    <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Código de segurança é obrigatório.
+                    </div>
+                  </div>
+                </div>
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Continue o checkout</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+
+  </footer>
+  <script src="/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

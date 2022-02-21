@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Texturina', serif;
+}
+
+@media (max-width: 576px) {
+  #carrinho,
+  #btnlogin {
+    margin-left: 0 !important;
+    margin-top: 5px;
+  }
+  .produto{
+    margin-top: 3px;
+    margin-left: 1px;
+  }
+  .linha2{
+    margin-top: 0px !important;
+  }
+  #telefone{
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.produto {
+  border: 1px solid #00c9c8;
+  padding: 5px;
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.btncomprar {
+  position: absolute;
+  left: 5%;
+  bottom: 20px;
+  width: 90%;
+  background: #faf8f9 !important;
+}
+
+.btncomprar_details {
+  position: absolute;
+  left: 5%;
+  bottom: 20px;
+  width: 90%;
+  background: #faf8f9 !important;
+}
+
+#home {
+  background: rgba(49, 43, 43, 0.76);
+  color: aliceblue;
+}
+
+h6 {
+  position: absolute;
+  left: 5%;
+  bottom: 55px;
+  width: 90%;
+  border: 1px solid #ed5e93;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+nav {
+  background: #000000 !important;
+}
+
+#produtos {
+  background: #4b4a54;
+  color: antiquewhite;
+}
+
+.footer-payment-title {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.ofertas{
+    display: flex;  
+    justify-content: center;
+}
+
+footer{
+    background: #000000;
+    color: azure;
+}
+
+hr{
+    background: #fff3fa;
+}
+.clique{
+cursor: pointer;
+}
+.fundo{
+  background: #4b4a54;
+  color: antiquewhite;
+}
+
+.preco {
+  position: absolute;
+  border: 1px solid #ed5e93;
+  padding: 5px;
+
+}
+
+.invisivel{
+  display: none;
+}
+
+#sobre{
+ font-size: 20px;
+ text-align: justify;
+}
+
+.checkout{
+  background: #001F2D;
+}
+
+#divbotao{
+  margin: 200px;
+}
